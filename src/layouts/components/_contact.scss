@@ -1,0 +1,249 @@
+
+
+
+.contact {
+    padding-top: 7em;
+    // background: green;
+
+
+    @media (max-width: 650px) {
+        padding-top: 17em;
+        padding-bottom: 3em;
+     }
+
+     @media (max-width: 427px) {
+        padding-top: 26em;
+     }
+
+     @media (max-width: 400px) {
+        padding-bottom: 5em;
+     }
+
+
+    &__title {
+        padding-left: 4.5em;
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-bottom: 1em;
+        color: #333;
+
+        @media (max-width: 650px) {
+            margin-bottom: 5em;
+            margin-left: -2.7em;
+            font-size: 3em;
+         }
+
+         @media (max-width: 427px) {
+            margin-bottom: 5em;
+            font-size: 5em;
+         }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: flex-end;
+        height: $size;
+
+        @media (max-width: 650px) {
+            flex-direction: column;
+         }
+
+    }
+
+    &__cards {
+        margin-right: 4em;
+        display: flex;
+        background: white;
+        border-radius: .6em;
+        border: .01em solid #e1e1e1;
+        width: 57%;
+        min-height: 25em;
+
+        @media (max-width: 650px) {
+            margin: 0 auto;
+            margin-right: 0;
+            margin-bottom: 1.5em;
+            flex-direction: column;
+            width: 100%;
+         }
+
+    }
+
+    &__card {
+        position: relative;
+
+        &__image {
+            width: 30%;
+            border-radius: .6em 0 0 .6em;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        left: -8em;
+        top: 2.5em;
+        object-fit: cover;
+        width: 20em;
+        height: 20em;
+        border-radius: .8em;
+        border: .01em solid #b1b1b1;
+
+        @media (max-width: 650px) {
+            top: -5em;
+            left: 0;
+            width: 14em;
+            height: 14em;
+         }
+    }
+
+    &__form {
+        position: relative;
+        margin-left: 3em;
+        padding: 1em;
+        padding-top: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 20em;
+        height: $size;
+
+        @media (max-width: 650px) {
+            margin-left: 0;
+            padding-top: 10em;
+            width: $size;
+         }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -2.5em;
+            top: 1.6em;
+            width: 1.6em;
+            height: 1.6em;
+            background-color: $violet--light;
+            border-radius: 50%;
+
+            @media (max-width: 650px) {
+                display: none;
+             }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 2em;
+            bottom: 1.5em;
+            width: 1.6em;
+            height: 1.6em;
+            background-color: $green--light;
+            border-radius: 50%;
+
+            @media (max-width: 650px) {
+                display: none;
+             }
+        }
+    }
+
+    &__input {
+        position: relative;
+        margin-bottom: 1.3em;
+        padding: .88em .88em .88em 0;
+        border: 0;
+        outline: 0;
+        font-weight: 400;
+        font-size: .78em;
+        border-bottom: .01em solid #ccc;
+        color: #5c5c5c;
+        width: $size;
+        transition: border-color .3s linear;
+
+        &::placeholder {
+            color: #ccc;
+            font-weight: 300;
+        }
+
+        &:focus {
+            border-color: $violet--light;
+        }
+    }
+
+    &__button {
+        @include overBtn;
+        padding: 1.1em .6em;
+        margin-top: 2em;
+        font-weight: 800;
+        font-size: .64em;
+        cursor: pointer;
+        width: $size;
+    }
+}
+
+    //Item 
+
+    .contact__item {
+        overflow: hidden;
+        border-radius: .5em;
+        background: white;
+        border: .01em solid #d6d6d6cc;
+        width: 15em;
+        height: 15em;
+
+        @media (max-width: 650px) {
+            height: 7em;
+         }
+
+        &__image {
+            position: relative;
+            width: $size;
+            height: 5em;
+            background-image: linear-gradient(rgba(8, 8, 8, 0.229), rgba(0, 0, 0, 0.228)),url('../../assets/67.jpeg');
+            background-position: 100% 1%;
+
+            @media (max-width: 650px) {
+                display: none;
+             }
+        }
+
+        &__img {
+            position: absolute;
+            left: 1.3em;
+            bottom: -2em;
+            border-radius: 50%;
+            object-fit: cover;
+            width: 4em;
+            height: 4em;
+            border: .02em solid #ccc;
+        }
+
+        &__text {
+            padding: 3em 1em 1em 1em;
+
+            @media (max-width: 650px) {
+                padding: 1em;
+             }
+        }
+
+        &__link {
+            margin-bottom: 1em;
+            display: block;
+            display: flex;
+            align-items: center;
+            color: #737373cc;
+            font-weight: 300;
+            font-size: .7em;
+            text-decoration: none;
+            border: 0;
+            outline: 0;
+            transition: color .3s linear;
+            
+            &:hover {
+                // text-decoration: underline;
+                color: $violet--light;
+            }
+        }
+
+        &__sp {
+            margin-left: .5em;
+        }
+    }

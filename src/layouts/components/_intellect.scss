@@ -1,0 +1,244 @@
+
+
+.int {
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    width: $size;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    
+    @media (max-width: 650px) {
+        padding-top: 14em;
+    }
+
+    @media (max-width: 427px) {
+        padding-top: 10em;
+        height: $size;
+        font-size: calc(0vw * 0 + 1.6em);
+   }
+
+   @media (max-width: 400px) {
+    font-size: calc(0vw * 0 + 2em);
+   }
+
+    &__container {
+        display: flex;
+        @media (max-width: 650px) {
+            padding: 2em;
+        }
+
+        @media (max-width: 427px) {
+            padding-bottom: 4em;
+        }
+    }
+
+    &__add {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 35em;
+        height: 100vh;
+        z-index: 200;
+        background: rgb(18, 62, 68);
+        background: white;
+        border-right: .01em solid #dbdbdb;
+
+        @media (max-width: 650px) {
+            width: $size;
+            z-index: 2;
+            border-right: 0;
+        }
+    }
+
+    &__users {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: $size;
+
+        &__user {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          flex-direction: column;
+        }
+    }
+
+    &__user {
+        margin-bottom: .5em;
+        font-size: .75em;
+        font-weight: 400;
+        color: #555;
+
+        @media (max-width: 650px) {
+            font-size: 1.9em;
+       }
+    }
+
+    &__admin {
+        position: absolute;
+        top: -1.3em;
+        left: -.7em;
+        font-size: .6em;
+        font-weight: 500;
+        color:  rgba(21, 76, 85, 0.919);
+        text-decoration: underline;
+
+        @media (max-width: 650px) {
+             font-size: 1.5em;
+        }
+    }
+
+    &__logout {
+        padding: .2em .5em;
+        border-radius: .5em;
+        border: 0;
+        outline: 0;
+        color: red;
+        font-size: .5em;
+        border: .01em solid rgba(255, 0, 0, 0.345);
+        background: rgba(255, 0, 0, 0.215);
+        cursor: pointer;
+        transition: background .5s ease-in-out, color .3s linear;
+
+        @media (max-width: 650px) {
+            font-size: 1.4em;
+        }
+
+        &:hover {
+            background: red;
+            color: white;
+        }
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $size;
+        position: relative;
+        background-image: linear-gradient(rgba(23, 41, 46, 0.387),rgba(19, 31, 39, 0.222)),url('../../assets/robot.jpeg');
+        background-position: 20% 100%;
+        background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media (max-width: 650px) {
+               display: none;
+        }
+
+        &__title {
+            position: absolute;
+            top: 9em;
+            left: 5em;
+            padding-bottom: 1em;
+            max-width: 40%;
+            line-height: 150%;
+            font-size: 1em;
+            color: $green--light;
+            color: rgb(228, 228, 228);
+            border-bottom: .03em solid  rgb(208, 208, 208);;
+        }
+    }
+
+    // FORM 1 
+
+    &__connexion {
+        padding-top: 4em;
+        margin-bottom: 3em;
+        width: 50%;
+
+        .int__input {
+            margin-bottom: 1.5em;
+        }
+
+        @media (max-width: 650px) {
+            padding-top: 7em;
+       }
+    }
+
+    &__connect {
+        margin-bottom: .5em;
+        color: #333;
+        font-size: .9em;
+
+        @media (max-width: 650px) {
+            font-size: 2.5em;
+       }
+    }
+
+    &__input {
+        padding: .9em 1em;
+        margin-bottom: 1em;
+        border: 0;
+        outline: 0;
+        border: .01em solid #e1e1e1;
+        border-radius: .4em;
+        width: $size;
+        transition: border-color .3s linear, background .4s ease-in;
+
+        &:focus {
+            border-color: lighten($violet--light, 15);
+            background: lighten($violet--light, 35);
+        }   
+    }
+
+    &__sign {
+        padding: .7em 2em;
+        border: 0;
+        border-radius: .5em;
+        outline: 0;
+        font-weight: 800;
+        cursor: pointer;
+        background: rgb(25, 83, 91);
+        color: white;
+        transition: background .5s ease-in-out;
+
+        &:hover {
+            background: lighten($violet--light, 5);
+        }
+
+    }
+
+
+
+    // FORM 2 
+    &__add__title {
+        margin-bottom: .7em;
+        color: #333;
+        font-size: .95em;
+
+        @media (max-width: 650px) {
+            font-size: 2.5em;
+       }
+    }
+
+    &__form {
+        // display: none;
+    }
+
+    &__form__add {
+        .int__input {
+            margin-bottom: 1.8em;
+            padding: 1.1em 1em;
+        }
+    }
+
+    &__send {
+        padding: .7em 2em;
+        border: 0;
+        border-radius: .5em;
+        outline: 0;
+        font-weight: 800;
+        cursor: pointer;
+        background: rgb(25, 83, 91);
+        color: white;
+        transition: background .5s ease-in-out;
+
+        &:hover {
+            background: lighten($violet--light, 5);
+        }
+    }
+}

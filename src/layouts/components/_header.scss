@@ -1,0 +1,202 @@
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $size;
+    background: transparent;
+    height: 3.5em;
+    z-index: 100;
+    background: #f4f4f4;
+
+    @media (max-width: 650px) {
+        top: 0;
+        padding: 0 1em;
+        padding-left: 0;
+        font-size: calc(0vw * 0 + 2em);
+        height: 5.6em;
+        background: rgb(255, 255, 255);
+        border: .01em solid #e7e7e7;
+    }
+
+    @media (max-width: 427px) {
+        height: 8em;
+        // background: greenyellow;
+    }
+
+    @media (max-width: 400px) {
+        padding: 0 .97em;
+        height: 10em;
+        // background: greenyellow;
+    }
+
+    &__menu {
+        display: none;
+        font-size: 1.31em;
+        font-weight: 300;
+        color: $violet--light;
+        cursor: pointer;
+
+        @media (max-width: 650px) {
+            display: flex;
+        }
+    }
+
+    &__container {
+        padding: 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        @media (max-width: 650px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: $size;
+            height: $size;
+        }
+    }
+
+    &__logo-sp {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .7em;
+        font-weight: 300;
+        width: 3.5em;
+        height: 3.5em;
+        border-radius: 10%;
+        cursor: pointer;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        z-index: 100;
+
+        @media (max-width: 650px) {
+            // display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 5em;
+            flex-direction: column;
+            align-items: center;
+            justify-2ntent: flex-start;
+            width: $size;
+            height: $size;
+            background: #363636;
+            text-align: center;
+            animation: alt opacity .4s ease-in-out;
+
+            @keyframes alt {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+        }
+
+        @media (max-width: 427px) {
+            padding-top: 3em;
+            font-size: calc(0vw * 0 + .8em);
+        }
+
+
+        &__closeMenu {
+            position: absolute;
+            top: 1.2em;
+            right: 1em;
+            display: block;
+            display: none;
+            font-size: 1.5em;
+            color: rgba(211, 211, 211, 0.642);
+            cursor: pointer;
+
+            @media (max-width: 650px) {
+                display: flex;
+            }
+
+            @media (max-width: 427px) {
+                top: .7em;
+                right: .7em;
+                font-size: 1em;
+            }
+        }
+    }
+
+
+    &__item {
+        margin-right: 2em;
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @media (max-width: 650px) {
+            margin-right: 0;
+            margin-bottom: 1em;
+        }
+    }
+
+    &__link {
+        position: relative;
+        padding-bottom: .2em;
+        @include over;
+        font-size: .8em;
+        text-decoration: none;
+        font-weight: 400;
+        color: #505050;
+        transition: color .3s ease-in-out;
+
+        @media (max-width: 650px) {
+            font-size: 1em;
+            color: $green--light;
+        }
+
+        &:hover {
+            color: $green--light;
+        }
+    }
+}
+
+
+// isMobile 
+
+.nav_isMobile {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+@media (max-width: 650px) {
+    .nav_isMobile {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 5em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: $size;
+        height: $size;
+        background: #363636;
+        text-align: center;
+        animation: alt .6s ease-in-out;
+
+        @keyframes alt {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+  }
+}

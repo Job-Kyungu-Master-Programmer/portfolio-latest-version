@@ -1,0 +1,51 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Developpement web, et contruction dev",
+      "content": "Je ferais tout ce qui me revient des droits",
+      "author": "Jeancy Dalos",
+      "text": "The time for intellectualism has arrived! The future is within reach, let’s seize it!"
+    },
+    {
+      "id": 2,
+      "title": "Developpement web, et contruction dev",
+      "content": "Je ferais tout ce qui me revient des droits",
+      "author": "Jeancy Dalos",
+      "text": "The time for intellectualism has arrived! The future is within reach, let’s seize it!"
+    },
+    {
+      "id": 3,
+      "title": "Developpement web, et contruction dev",
+      "content": "Je ferais tout ce qui me revient des droits",
+      "author": "Jeancy Dalos",
+      "text": "The time for intellectualism has arrived! The future is within reach, let’s seize it!"
+    },
+    {
+      "title": "merci title",
+      "content": "merci content",
+      "author": "merci author",
+      "text": "text",
+      "id": 4
+    },
+    {
+      "title": "La transformation des usines",
+      "content": "Comment se demarquer des clients",
+      "author": "Job Kyungu",
+      "text": "Merci beaucoup pour vottre marque",
+      "id": 5
+    },
+    {
+      "title": "L'HISTORIQUE DE LA RUSSIE MODERNE",
+      "content": "Voir loin au-dela de tout",
+      "author": "Josue Kizito",
+      "text": "efhd d d",
+      "hour": 4,
+      "minutes": 16,
+      "day": 1,
+      "month": 11,
+      "years": 2023,
+      "id": 6
+    }
+  ]
+}
